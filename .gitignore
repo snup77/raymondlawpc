@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node (if using a build tool like webpack/vite)
+node_modules/
+*.log
+
+# Build artifacts (if applicable)
+dist/
