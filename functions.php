@@ -101,31 +101,31 @@ add_action('after_setup_theme', 'theme_register_menus');
 
 // Insert ACF hreflang tags
 
-function insert_acf_hreflang_tags() {
-    if (!is_singular()) return;
+// function insert_acf_hreflang_tags() {
+//     if (!is_singular()) return;
 
-    $settings = get_field('language_settings');
-    if (!$settings) return;
+//     $settings = get_field('language_settings');
+//     if (!$settings) return;
 
-    $language = isset($settings['language']) ? $settings['language'] : 'en';
-    $alternate_slug = isset($settings['alternate_link']) ? trim($settings['alternate_link'], '/') : '';
+//     $language = isset($settings['language']) ? $settings['language'] : 'en';
+//     $alternate_slug = isset($settings['alternate_link']) ? trim($settings['alternate_link'], '/') : '';
 
-    // Skip if no alternate slug provided
-    if (!$alternate_slug) return;
+//     // Skip if no alternate slug provided
+//     if (!$alternate_slug) return;
 
-    // Build full URL from slug
-    $alternate_url = home_url("/{$alternate_slug}/");
+//     // Build full URL from slug
+//     $alternate_url = home_url("/{$alternate_slug}/");
 
-    // Map to hreflang format
-    $current_url = get_permalink();
-    $hreflang = ($language === 'es') ? 'es-US' : 'en-US';
-    $alt_hreflang = ($language === 'es') ? 'en-US' : 'es-US';
+//     // Map to hreflang format
+//     $current_url = get_permalink();
+//     $hreflang = ($language === 'es') ? 'es-US' : 'en-US';
+//     $alt_hreflang = ($language === 'es') ? 'en-US' : 'es-US';
 
-    // Output hreflang tags
-    echo '<link rel="alternate" hreflang="' . esc_attr($hreflang) . '" href="' . esc_url($current_url) . '">' . "\n";
-    echo '<link rel="alternate" hreflang="' . esc_attr($alt_hreflang) . '" href="' . esc_url($alternate_url) . '">' . "\n";
-}
-add_action('wp_head', 'insert_acf_hreflang_tags');
+//     // Output hreflang tags
+//     echo '<link rel="alternate" hreflang="' . esc_attr($hreflang) . '" href="' . esc_url($current_url) . '">' . "\n";
+//     echo '<link rel="alternate" hreflang="' . esc_attr($alt_hreflang) . '" href="' . esc_url($alternate_url) . '">' . "\n";
+// }
+// add_action('wp_head', 'insert_acf_hreflang_tags');
 
 // Remove Yoast schema and add custom schema output
 

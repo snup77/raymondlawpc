@@ -227,6 +227,9 @@ document.addEventListener('DOMContentLoaded', function () {
       submenu.style.opacity = '0';
       setSubmenuLinksTabIndex(submenu, -1);
 
+      const parentLink = item.querySelector(':scope > a');
+      const parentLinkText = parentLink ? parentLink.textContent.trim() : 'submenu';
+
       const toggleBtn = document.createElement('button');
       toggleBtn.className = 'submenu-toggle';
       toggleBtn.type = 'button';

@@ -1,19 +1,3 @@
-<?php
-// Default to 'en-US'
-$page_lang = 'en-US';
-
-// Get language value from ACF group field
-$language_settings = get_field('language_settings');
-$language = isset($language_settings['language']) ? $language_settings['language'] : 'en';
-
-// Map short code to region-specific code
-if ($language === 'es') {
-    $page_lang = 'es-US';
-} elseif ($language === 'en') {
-    $page_lang = 'en-US';
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -86,4 +70,4 @@ if ($language === 'es') {
   <div class="flyout-overlay" id="flyoutOverlay"></div>
 </header>
 
-<main id="main-content">
+<main id="main-content" tabindex="-1">

@@ -46,7 +46,7 @@ button, input, textarea, select {
   border: none;
   padding: 0;
   margin: 0;
-  outline: none;
+  /* outline: none; */
 }
 
 table {
@@ -161,6 +161,12 @@ h1, h2 {
   margin: 0 auto;
   padding: 0 1.25rem;
 }
+
+:focus-visible {
+  outline: 3px solid black;
+  outline-offset: 2px;
+}
+
 
 /* -------------------------------------------
   Header and Navigation Styles
@@ -763,8 +769,17 @@ address.footer-contact {
  .gform-footer input[type="submit"]:focus {
   background-color: var(--link-color-hover) !important;
   color: var(--color-white) !important;
-  outline: none !important;
+  /* outline: none !important; */
 }
+
+/* Add instead: */
+.section-button:focus-visible,
+.gform-footer input[type="submit"]:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+
 
 /* ========== Homepage Hero Area ========== */
 .home-hero {
