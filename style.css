@@ -14,7 +14,6 @@ Theme Name: Raymond Law PC
 
 html {
   font-size: 100%;
-  scroll-behavior: smooth;
 }
 
 body, h1, h2, h3, h4, h5, h6, p,
@@ -52,6 +51,10 @@ button, input, textarea, select {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }
 
 /* -------------------------------------------
@@ -131,7 +134,7 @@ table {
   --h2: clamp(2.25rem, 1.9651rem + 1.2155vw, 2.9375rem);
   --bodycopy: clamp(1rem, 0.8964rem + 0.442vw, 1.25rem);
   --color-primary: #3A65AA;
-  --color-accent: #FF8552;
+  --color-accent: #D64000;
   --color-border-bottom: #9EA1AB;
   --color-background-blue: #F6FAFF;
   --color-white: #FFFFFF;
@@ -367,7 +370,7 @@ img.custom-logo {
   }
 
   .primary-menu > li:last-child > a {
-  background-color: #FF8552;
+  background-color: var(--color-accent);
   color: var(--color-white);
   padding: 0.6rem 1.2rem;
   border-radius: 2px;
@@ -378,7 +381,7 @@ img.custom-logo {
 
 .primary-menu > li:last-child > a:hover,
 .primary-menu > li:last-child > a:focus {
-  background-color: #DE855F;
+  background-color: var(--link-color-hover);
   color: var(--color-white);
 }
 }
@@ -806,7 +809,7 @@ address.footer-contact {
 .home-hero__divider {
   width: 96px;
   height: 3px;
-  background-color: var(--color-accent);
+  background-color: var(--color-white);
   margin: 1rem 0;
 }
 
@@ -873,7 +876,7 @@ address.footer-contact {
   margin: 0 0 1rem;
   font-size: .9rem;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-white);
   letter-spacing: 2px;
 }
 

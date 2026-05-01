@@ -192,3 +192,7 @@ function allow_vcard_upload($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'allow_vcard_upload');
+
+add_filter( 'gform_required_legend', function ( $legend, $form ) {
+    return '<p class="gform_required_legend">All fields are required.</p>';
+}, 10, 2 );
