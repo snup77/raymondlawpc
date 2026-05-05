@@ -24,6 +24,7 @@ $menu_location  = get_query_var('menu_location');
           'theme_location'  => $menu_location,
           'container'       => 'nav',
           'container_class' => 'practice-subnav',
+          'container_aria_label' => $subnav_heading, // e.g. "Practice Areas"
           'menu_class'      => 'practice-subnav-list',
           'depth'           => 2,
           'fallback_cb'     => false,

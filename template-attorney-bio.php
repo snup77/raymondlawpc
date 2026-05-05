@@ -25,7 +25,7 @@ Description: A custom template for displaying attorney biographies.
       <div class="attorney-hero-content">
         <h1><?php echo esc_html($hero['attorney_name']); ?></h1>
         <p class="attorney-title"><?php echo esc_html($hero['attorney_title']); ?></p>
-        <hr>
+        <hr aria-hidden="true">
         <p><a href="mailto:<?php echo esc_attr($hero['email_address']); ?>"><?php echo esc_html($hero['email_address']); ?></a></p>
         <p><a href="tel:<?php echo esc_attr($hero['phone_number']); ?>"><?php echo esc_html($hero['phone_number']); ?></a></p>
         <p><a href="<?php echo esc_url($hero['vcf']); ?>">Download vCard</a></p>
@@ -47,7 +47,7 @@ Description: A custom template for displaying attorney biographies.
       <div class="attorney-section overview">
         <?php if ($heading) : ?>
           <h2><?php echo esc_html($heading); ?></h2>
-          <hr>
+          <hr aria-hidden="true">
         <?php endif; ?>
 
         <?php if ($text) : ?>

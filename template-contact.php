@@ -56,7 +56,14 @@ Description: A custom template for displaying the contact page.
         <?php if ($google_map) : ?>
           <div class="google-map-wrapper">
             <div class="responsive-map">
-              <?php echo $google_map; ?>
+              <?php
+              $google_map_titled = str_replace(
+                '<iframe ',
+                '<iframe title="Office location on Google Maps" ',
+                $google_map
+              );
+              echo $google_map_titled;
+              ?>
             </div>
           </div>
         <?php endif; ?>
