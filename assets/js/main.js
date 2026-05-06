@@ -235,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
       toggleBtn.type = 'button';
       toggleBtn.setAttribute('aria-controls', submenuId);
       toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.setAttribute('aria-label', 'Toggle ' + parentLinkText + ' submenu');
       toggleBtn.innerHTML = createPlusMinusIcon(false);
 
       toggleBtn.addEventListener('click', function () {

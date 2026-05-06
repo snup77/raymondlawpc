@@ -563,7 +563,7 @@ img.custom-logo {
 }
 
 .submenu-toggle:focus-visible {
-  outline: 2px solid #0073aa;
+  outline: 3px solid #ffffff;
   outline-offset: 2px;
 }
 
@@ -754,7 +754,7 @@ address.footer-contact {
 
 /* Global Button Styles - Includes Contact Form */
 .section-button,
-.gform-footer input[type="submit"] {
+.gform_footer input[type="submit"] {
   display: inline-block !important;
   padding: 0.75rem 1.5rem !important;
   font-size: 1rem !important;
@@ -768,17 +768,15 @@ address.footer-contact {
 
 .section-button:hover,
 .section-button:focus,
- .gform-footer input[type="submit"]:hover,
- .gform-footer input[type="submit"]:focus {
+.gform_footer input[type="submit"]:hover,
+.gform_footer input[type="submit"]:focus {
   background-color: var(--link-color-hover) !important;
   color: var(--color-white) !important;
-  /* outline: none !important; */
 }
 
-/* Add instead: */
 .section-button:focus-visible,
-.gform-footer input[type="submit"]:focus-visible {
-  outline: 3px solid var(--color-white);
+.gform_footer input[type="submit"]:focus-visible {
+  outline: 3px solid #000000 !important;
   outline-offset: 3px;
 }
 
@@ -1874,6 +1872,18 @@ h2.archive-title {
   text-decoration: underline;
 }
 
+.file-type-hint {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media (max-width: 767px) {
   .attorney-hero {
     padding: 0;
@@ -2164,6 +2174,14 @@ h2.gform_title {
   border-radius: 0 !important;
   border-color: var(--color-text) !important;
   background-color: var(--color-background-blue) !important;
+}
+
+.gform-body input[type="text"]:focus-visible,
+.gform-body input[type="email"]:focus-visible,
+.gform-body input[type="tel"]:focus-visible,
+.gform-body textarea:focus-visible {
+  outline: 3px solid #000000 !important;
+  outline-offset: 2px;
 }
 
 .insights-section {

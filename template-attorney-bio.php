@@ -28,7 +28,7 @@ Description: A custom template for displaying attorney biographies.
         <hr aria-hidden="true">
         <p><a href="mailto:<?php echo esc_attr($hero['email_address']); ?>"><?php echo esc_html($hero['email_address']); ?></a></p>
         <p><a href="tel:<?php echo esc_attr($hero['phone_number']); ?>"><?php echo esc_html($hero['phone_number']); ?></a></p>
-        <p><a href="<?php echo esc_url($hero['vcf']); ?>">Download vCard</a></p>
+        <p><a href="<?php echo esc_url($hero['vcf']); ?>" download>Download vCard <span class="file-type-hint">(.vcf)</span></a></p>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ if (have_rows('attorney_credentials')) :
     <div class="attorney-section credentials">
       <?php if ($cred_heading) : ?>
         <h2><?php echo esc_html($cred_heading); ?></h2>
-        <hr>
+        <hr aria-hidden="true">
       <?php endif; ?>
 
       <?php if (have_rows('list_items')) : ?>

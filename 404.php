@@ -23,6 +23,7 @@
           'theme_location'  => 'helpful_links_subnav',
           'container'       => 'nav',
           'container_class' => 'practice-subnav',
+          'container_aria_label' => 'Helpful links',
           'menu_class'      => 'practice-subnav-list',
           'fallback_cb'     => false,
         ]);
